@@ -2,7 +2,7 @@
 import sys
 sys.path.append('.')
 sys.path.append('./bit_game_2')
-# import bit_game_2
+import bit_game_2
 
 dict_of_outcomes = {"convert_to_bin_outcome": '0b1000',
                     "clean_bin_outcome": '1000',
@@ -30,6 +30,8 @@ list_elements = [
     "Find a desk",
 ]
 
+writing_letters = ["a", "b", "c", "d"]
+
 def test_get_my_output():
     general_outcome = {'Paster the walls': 0, 'Paint': 0, 'Lay the floor': 0, 'Tidy up': 1}
     assert bit_game_2.get_my_output(8) == general_outcome
@@ -46,9 +48,19 @@ def test_turn_string_around():
 def test_make_list_of_string():
     assert bit_game_2.make_list_of_string('0001') == dict_of_outcomes.get("make_list_of_string_outcome")
 
+def test_make_ints_in_elements_list():
+    assert bit_game_2.make_ints_in_elements_list(['0', '0', '0', '1']) == [0, 0, 0, 1]
+
 def test_show_gained_elements():
-    assert bit_game_2.show_gained_elements(['0', '0', '0', '1'], '0001') == dict_of_outcomes.get("gained_elements_outcome")
+    assert bit_game_2.show_gained_elements(list_elements, ['0', '0', '0', '1'],) == dict_of_outcomes.get("gained_elements_outcome")
 
 def test_play_merge_game_with_lifes():
     assert bit_game_2.play_merge_game_with_lifes(list_elements, 8) == {'Paster the walls': 0, 'Paint': 0, 'Lay the floor': 0, 'Tidy up': 1}
+    assert bit_game_2.play_merge_game_with_lifes(writing_letters, 8) == {'a': 0, 'b': 0, 'c': 0, 'd': 1}
+    assert bit_game_2.play_merge_game_with_lifes(writing_letters, 8) != {'a': 1, 'b': 0, 'c': 0, 'd': 1}
+
+def test_add_up():
+    assert bit_game_2.add_up(1) == 2
+    assert bit_game_2.add_up(1) != 3
+
 

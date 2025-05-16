@@ -46,13 +46,23 @@ def turn_string_around(cleaned_bin):
 def make_list_of_string(turned_string_around):
     return list(turned_string_around)
 
+def make_ints_in_elements_list(list_with_turned_strings):
+    return list(map(int, list_with_turned_strings))
+
 def show_gained_elements(list_with_elements, list_of_strings):
     return {k: v for k, v in zip(list_with_elements, list_of_strings)} 
 
-def play_merge_game_with_lifes(elements, number_lifes)
+def play_merge_game_with_lifes(elements, number_lifes):
     converter = convert_to_bin(number_lifes)
     cleaned_bin_string = clean_bin(converter)
     turned_string = turn_string_around(cleaned_bin_string)
     list_maker = make_list_of_string(turned_string)
-    outcome_gains = show_gained_elements(elements, list_maker)
+    ints_maker = make_ints_in_elements_list(list_maker)
+    outcome_gains = show_gained_elements(elements, ints_maker)
     return outcome_gains
+
+def add_up(number):
+    return number+1
+
+print(play_merge_game_with_lifes(building_a_house_list, 8))
+print(make_ints_in_elements_list(['0', '0', '0', '1']))
