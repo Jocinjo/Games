@@ -23,6 +23,6 @@ def test_clean_bin():
     assert bit_game_2.clean_bin('0b1000') == dict_of_outcomes.get("clean_bin_outcome")
 
 def test_turn_string_around():
-    pass
+    assert bit_game_2.turn_string_around('1000') == dict_of_outcomes.get("turn_string_around_outcome")
 
 
