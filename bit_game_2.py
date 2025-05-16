@@ -60,9 +60,3 @@ def play_merge_game_with_lifes(elements, number_lifes):
     ints_maker = make_ints_in_elements_list(list_maker)
     outcome_gains = show_gained_elements(elements, ints_maker)
     return outcome_gains
-
-def add_up(number):
-    return number+1
-
-print(play_merge_game_with_lifes(building_a_house_list, 8))
-print(make_ints_in_elements_list(['0', '0', '0', '1']))

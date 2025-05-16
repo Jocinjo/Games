@@ -59,8 +59,6 @@ def test_play_merge_game_with_lifes():
     assert bit_game_2.play_merge_game_with_lifes(writing_letters, 8) == {'a': 0, 'b': 0, 'c': 0, 'd': 1}
     assert bit_game_2.play_merge_game_with_lifes(writing_letters, 8) != {'a': 1, 'b': 0, 'c': 0, 'd': 1}
 
-def test_add_up():
-    assert bit_game_2.add_up(1) == 2
-    assert bit_game_2.add_up(1) != 3
+
 
 
