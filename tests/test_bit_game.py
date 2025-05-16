@@ -8,7 +8,8 @@ dict_of_outcomes = {"convert_to_bin_outcome": '0b1000',
                     "clean_bin_outcome": '1000',
                     "turn_string_around_outcome": '0001',
                     "make_list_of_string_outcome": ['0', '0', '0', '1'],
-                    "gained elements": "do not know yet"
+                    "gained_elements_outcome": {'Paster the walls': '0', 'Paint': '0', 'Lay the floor': '0', 'Tidy up': '1'}
+
 
                     }
 
@@ -28,4 +29,6 @@ def test_turn_string_around():
 def test_make_list_of_string():
     assert bit_game_2.make_list_of_string('0001') == dict_of_outcomes.get("make_list_of_string_outcome")
 
+def test_show_gained_elements():
+    assert bit_game_2.show_gained_elements(['0', '0', '0', '1'], '0001') == dict_of_outcomes.get("gained_elements_outcome")
 

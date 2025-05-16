@@ -45,3 +45,7 @@ def turn_string_around(cleaned_bin):
 
 def make_list_of_string(turned_string_around):
     return list(turned_string_around)
+
+def show_gained_elements(list_with_elements, list_of_strings):
+    return {k: v for k, v in zip(list_with_elements, list_of_strings)} 
+
