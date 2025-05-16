@@ -50,3 +50,5 @@ def play_merge_game_with_energy(elements, number_of_energy):
     ints_maker = make_ints_in_elements_list(list_maker)
     outcome_gains = show_gained_elements(elements, ints_maker)
     return outcome_gains
+
+# TODO: make a score system
