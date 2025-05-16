@@ -23,11 +23,11 @@ def get_my_output(energy):
     turned_string = clean_string[::-1]
     list_of_elements_binary_string = list(turned_string)
     list_of_elements_binary_int = list(map(int, list_of_elements_binary_string))
-    gespaarde_elementen = {
+    gained_elements = {
         k: v for k, v in zip(building_a_house_list, list_of_elements_binary_int)
     }
 
-    return gespaarde_elementen
+    return gained_elements
 
 print(get_my_output(8))
 
