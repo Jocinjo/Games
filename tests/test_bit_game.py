@@ -71,20 +71,20 @@ def test_show_gained_elements():
     ) == dict_of_outcomes.get("gained_elements_outcome")
 
 
-def test_play_merge_game_with_lifes():
-    assert bit_game_2.play_merge_game_with_lifes(list_elements, 8) == {
+def test_play_merge_game_with_energy():
+    assert bit_game_2.play_merge_game_with_energy(list_elements, 8) == {
         "Paster the walls": 0,
         "Paint": 0,
         "Lay the floor": 0,
         "Tidy up": 1,
     }
-    assert bit_game_2.play_merge_game_with_lifes(writing_letters, 8) == {
+    assert bit_game_2.play_merge_game_with_energy(writing_letters, 8) == {
         "a": 0,
         "b": 0,
         "c": 0,
         "d": 1,
     }
-    assert bit_game_2.play_merge_game_with_lifes(writing_letters, 8) != {
+    assert bit_game_2.play_merge_game_with_energy(writing_letters, 8) != {
         "a": 1,
         "b": 0,
         "c": 0,
