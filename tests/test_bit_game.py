@@ -32,9 +32,6 @@ list_elements = [
 
 writing_letters = ["a", "b", "c", "d"]
 
-def test_get_my_output():
-    general_outcome = {'Paster the walls': 0, 'Paint': 0, 'Lay the floor': 0, 'Tidy up': 1}
-    assert bit_game_2.get_my_output(8) == general_outcome
 
 def test_convert_to_bin():
     assert bit_game_2.convert_to_bin(8) == dict_of_outcomes.get("convert_to_bin_outcome")

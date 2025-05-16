@@ -17,19 +17,6 @@ building_a_house_list = [
     "Find a desk",
 ]
 
-def get_my_output(energy):
-    bin_string = bin(energy)
-    clean_string = bin_string[2:]
-    turned_string = clean_string[::-1]
-    list_of_elements_binary_string = list(turned_string)
-    list_of_elements_binary_int = list(map(int, list_of_elements_binary_string))
-    gained_elements = {
-        k: v for k, v in zip(building_a_house_list, list_of_elements_binary_int)
-    }
-
-    return gained_elements
-
-print(get_my_output(8))
 
 def convert_to_bin(number):
     return bin(number)
@@ -57,3 +44,4 @@ def play_merge_game_with_lifes(elements, number_lifes):
     ints_maker = make_ints_in_elements_list(list_maker)
     outcome_gains = show_gained_elements(elements, ints_maker)
     return outcome_gains
+
