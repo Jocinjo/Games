@@ -42,3 +42,6 @@ def clean_bin(bin_output):
 
 def turn_string_around(cleaned_bin):
     return cleaned_bin[::-1]
+
+def make_list_of_string(turned_string_around):
+    return list(turned_string_around)

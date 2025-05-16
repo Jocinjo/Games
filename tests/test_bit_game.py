@@ -25,4 +25,7 @@ def test_clean_bin():
 def test_turn_string_around():
     assert bit_game_2.turn_string_around('1000') == dict_of_outcomes.get("turn_string_around_outcome")
 
+def test_make_list_of_string():
+    assert bit_game_2.make_list_of_string('0001') == dict_of_outcomes.get("make_list_of_string_outcome")
+
 
