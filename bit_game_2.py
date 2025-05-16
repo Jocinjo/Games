@@ -17,8 +17,8 @@ building_a_house_list = [
     "Find a desk",
 ]
 
-def get_my_output(levens):
-    bin_string = bin(levens)
+def get_my_output(energy):
+    bin_string = bin(energy)
     clean_string = bin_string[2:]
     turned_string = clean_string[::-1]
     list_of_elements_binary_string = list(turned_string)
