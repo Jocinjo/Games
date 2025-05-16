@@ -45,8 +45,7 @@ def test_convert_to_bin():
 
 
 def test_clean_bin():
-    assert bit_game_2.clean_bin("0b1000") == \
-        dict_of_outcomes.get("clean_bin_outcome")
+    assert bit_game_2.clean_bin("0b1000") == dict_of_outcomes.get("clean_bin_outcome")
 
 
 def test_turn_string_around():
@@ -62,8 +61,7 @@ def test_make_list_of_string():
 
 
 def test_make_ints_in_elements_list():
-    assert bit_game_2.make_ints_in_elements_list(["0", "0", "0", "1"]) == \
-        [0, 0, 0, 1]
+    assert bit_game_2.make_ints_in_elements_list(["0", "0", "0", "1"]) == [0, 0, 0, 1]
 
 
 def test_show_gained_elements():
