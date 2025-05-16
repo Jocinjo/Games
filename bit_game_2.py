@@ -40,3 +40,5 @@ def convert_to_bin(number):
 def clean_bin(bin_output):
     return bin_output[2:]
 
+def turn_string_around(cleaned_bin):
+    return cleaned_bin[::-1]

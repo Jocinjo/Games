@@ -17,13 +17,12 @@ def test_get_my_output():
     assert bit_game_2.get_my_output(8) == general_outcome
 
 def test_convert_to_bin():
-    outcome = '0b1000'
     assert bit_game_2.convert_to_bin(8) == dict_of_outcomes.get("convert_to_bin_outcome")
 
 def test_clean_bin():
-    outcome = '1000'
     assert bit_game_2.clean_bin('0b1000') == dict_of_outcomes.get("clean_bin_outcome")
 
-
+def test_turn_string_around():
+    pass
 
 
