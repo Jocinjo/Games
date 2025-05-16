@@ -1,5 +1,4 @@
-# import pandas as pd
-# import matplotlib.pyplot as plt
+"""the game elements are devided here"""
 
 building_a_house_list = [
     "Paster the walls",
@@ -17,7 +16,6 @@ building_a_house_list = [
     "Clean up the front yard",
     "Find a desk",
 ]
-# print(building_a_house_list)
 
 def get_my_output(levens):
     bin_string = bin(levens)
@@ -34,7 +32,6 @@ def get_my_output(levens):
 print(get_my_output(8))
 
 def convert_to_bin(number):
-    # print(bin(number))
     return bin(number)
 
 def clean_bin(bin_output):
