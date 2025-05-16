@@ -13,6 +13,23 @@ dict_of_outcomes = {"convert_to_bin_outcome": '0b1000',
 
                     }
 
+list_elements = [
+    "Paster the walls",
+    "Paint",
+    "Lay the floor",
+    "Tidy up",
+    "Clean",
+    "Look for a couch",
+    "Look for chairs",
+    "Find a TV",
+    "Search for curtains",
+    "Look for paintings",
+    "clean up the garden",
+    "Search for garden furniture",
+    "Clean up the front yard",
+    "Find a desk",
+]
+
 def test_get_my_output():
     general_outcome = {'Paster the walls': 0, 'Paint': 0, 'Lay the floor': 0, 'Tidy up': 1}
     assert bit_game_2.get_my_output(8) == general_outcome
@@ -31,4 +48,7 @@ def test_make_list_of_string():
 
 def test_show_gained_elements():
     assert bit_game_2.show_gained_elements(['0', '0', '0', '1'], '0001') == dict_of_outcomes.get("gained_elements_outcome")
+
+def test_play_merge_game_with_lifes():
+    assert bit_game_2.play_merge_game_with_lifes(list_elements, 8) == {'Paster the walls': 0, 'Paint': 0, 'Lay the floor': 0, 'Tidy up': 1}
 

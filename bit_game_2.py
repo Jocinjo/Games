@@ -49,3 +49,10 @@ def make_list_of_string(turned_string_around):
 def show_gained_elements(list_with_elements, list_of_strings):
     return {k: v for k, v in zip(list_with_elements, list_of_strings)} 
 
+def play_merge_game_with_lifes(elements, number_lifes)
+    converter = convert_to_bin(number_lifes)
+    cleaned_bin_string = clean_bin(converter)
+    turned_string = turn_string_around(cleaned_bin_string)
+    list_maker = make_list_of_string(turned_string)
+    outcome_gains = show_gained_elements(elements, list_maker)
+    return outcome_gains
