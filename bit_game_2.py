@@ -1,5 +1,5 @@
-import pandas as pd
-import matplotlib.pyplot as plt
+# import pandas as pd
+# import matplotlib.pyplot as plt
 
 building_a_house_list = [
     "Paster the walls",
@@ -32,3 +32,11 @@ def get_my_output(levens):
     return gespaarde_elementen
 
 print(get_my_output(8))
+
+def convert_to_bin(number):
+    # print(bin(number))
+    return bin(number)
+
+def clean_bin(bin_output):
+    return bin_output[2:]
+
