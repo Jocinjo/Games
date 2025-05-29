@@ -52,3 +52,18 @@ def play_merge_game_with_energy(elements, number_of_energy):
     return outcome_gains
 
 # TODO: make a score system
+
+def make_list_for_points(spent_lives = 10000):
+    lifes_needed = []
+    starter_life_amount = 1
+
+    while starter_life_amount <= spent_lives:
+        lifes_needed.append(starter_life_amount)
+        starter_life_amount *=2
+    
+    print(lifes_needed)
+
+make_list_for_points()
+make_list_for_points(512)
+
+# 16 points will get you points
