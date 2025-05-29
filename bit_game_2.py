@@ -64,10 +64,6 @@ def make_list_for_points(spent_lives = 10000):
     print(lifes_needed)
     return lifes_needed
 
-make_list_for_points()
-make_list_for_points(512)
-print("list for 33 points is:", make_list_for_points(33))
-
 
 def sum_points(list_for_points, spent_lives):
     total_amount_of_points = 0
@@ -80,10 +76,10 @@ def sum_points(list_for_points, spent_lives):
     
     return total_amount_of_points
 
-print(sum_points(make_list_for_points(32), 32))
-print(sum_points(make_list_for_points(64), 64))
 
-
-def show_amount_of_points(lives_for_score):
+def show_amount_of_one_points(lives_for_score):
     return sum_points(make_list_for_points(lives_for_score), lives_for_score)
 
+
+def combine_points_and_lists(list_of_elements, number_of_energy):
+    pass

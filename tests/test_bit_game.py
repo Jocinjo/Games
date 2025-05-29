@@ -103,6 +103,7 @@ def test_sum_points():
 
 
 
-def test_show_amount_of_points() :
-    assert bit_game_2.show_amount_of_points(64) == 7, "should be exactly 7"
-    assert bit_game_2.show_amount_of_points(65) == 7, "one point extra will not count"
+def test_show_amount_of_one_points():
+    assert bit_game_2.show_amount_of_one_points(64) == 7, "should be exactly 7"
+    assert bit_game_2.show_amount_of_one_points(65) == 7, "one point extra will not count"
+    assert bit_game_2.show_amount_of_one_points(15) == 0, "should be 0 because we don't hit element 5"
