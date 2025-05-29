@@ -62,8 +62,28 @@ def make_list_for_points(spent_lives = 10000):
         starter_life_amount *=2
     
     print(lifes_needed)
+    return lifes_needed
 
 make_list_for_points()
 make_list_for_points(512)
+print("list for 33 points is:", make_list_for_points(33))
 
-# 16 points will get you points
+
+def sum_points(list_for_points, spent_lives):
+    total_amount_of_points = 0
+    for i in list_for_points:
+        if i <= 8:
+            pass
+        else:
+            points_to_add = spent_lives // i
+            total_amount_of_points += points_to_add
+    
+    return total_amount_of_points
+
+print(sum_points(make_list_for_points(32), 32))
+print(sum_points(make_list_for_points(64), 64))
+
+
+def show_amount_of_points(lives_for_score):
+    return sum_points(make_list_for_points(lives_for_score), lives_for_score)
+

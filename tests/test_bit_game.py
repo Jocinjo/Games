@@ -90,3 +90,19 @@ def test_play_merge_game_with_energy():
         "c": 0,
         "d": 1,
     }
+
+
+def test_make_list_for_points():
+    assert bit_game_2.make_list_for_points(32) == [1, 2, 4, 8, 16, 32]
+    assert bit_game_2.make_list_for_points(33) == [1, 2, 4, 8, 16, 32]
+
+
+def test_sum_points():
+    assert bit_game_2.sum_points(bit_game_2.make_list_for_points(32), 32) == 3
+    assert bit_game_2.sum_points(bit_game_2.make_list_for_points(33), 33) == 3, "it should be 3"
+
+
+
+def test_show_amount_of_points() :
+    assert bit_game_2.show_amount_of_points(64) == 7, "should be exactly 7"
+    assert bit_game_2.show_amount_of_points(65) == 7, "one point extra will not count"
